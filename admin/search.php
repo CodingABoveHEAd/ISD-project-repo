@@ -11,8 +11,7 @@ if (strlen($_SESSION['eahpaid']==0)) {
 
 <!DOCTYPE html>
 <head>
-<title>Code Camp BD || On The Way Ambulance Request</title>
-
+<title>Code Camp BD ||Search Listed Product Details </title>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
 <link rel="stylesheet" href="css/bootstrap.min.css" >
@@ -38,16 +37,56 @@ if (strlen($_SESSION['eahpaid']==0)) {
 <!--sidebar end-->
 <!--main content start-->
 <section id="main-content">
-	<section class="wrapper">
-		<div class="table-agile-info">
+  <section class="wrapper">
+    <div class="table-agile-info">
  <div class="panel panel-default">
-    <div class="panel-heading">
-     On The Way Ambulance Request
-    </div>
+    
     <div>
-      <table class="table table-bordered">
+       <form class="cmxform form-horizontal" method="post" action="" name="search">
+                                   
+                                    <div class="form-group ">
+                                        
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="username" class="control-label col-lg-6">Search by Request Number / User Name / User Mobile No:</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" name="searchdata" id="searchdata" class="form-control" value="" required="true">
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                          <p style="text-align: center;"> <button class="btn btn-primary" type="submit" name="search">Search</button></p>
+                                           
+                                        </div>
+                                    </div>
+
+                                </form>
+                                <?php
+if(isset($_POST['search']))
+{ 
+
+$sdata=$_POST['searchdata'];
+  ?>
+  
+<div class="panel-heading">
+   
+          Result against "<?php echo $sdata;?>" keyword</div>
+
+      <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
         <thead>
-          <tr>
+
+       <thead>
+           <tr>
             <th data-breakpoints="xs">S.NO</th>
             <th>Booking Number</th>
             <th>Patient Name</th>
@@ -58,17 +97,18 @@ if (strlen($_SESSION['eahpaid']==0)) {
             <th data-breakpoints="xs">Action</th>
           </tr>
         </thead>
-        <?php
-      
-        
-$ret=mysqli_query($con,"select * from  tblambulancehiring  where tblambulancehiring.Status='On the way'");
+          
+         <?php
+        $eid= $_SESSION['empid'];
+$ret=mysqli_query($con,"select * from  tblambulancehiring where (tblambulancehiring.BookingNumber like '%$sdata%' || tblambulancehiring.PatientName  like '%$sdata%' || tblambulancehiring.RelativeConNum like '%$sdata%') ");
 $cnt=1;
 $count=mysqli_num_rows($ret);
 if($count>0){
 while ($row=mysqli_fetch_array($ret)) {
+
 ?>
-        <tbody>
-          <tr data-expanded="true">
+        
+        <tr data-expanded="true">
             <td><?php echo $cnt;?></td>
               <td><?php  echo $row['BookingNumber'];?></td>
               <td><?php  echo $row['PatientName'];?></td>
@@ -96,14 +136,15 @@ while ($row=mysqli_fetch_array($ret)) {
                 </tr>
                 <?php 
 $cnt=$cnt+1;
-} } else {?>
+}} else {?>
 <tr>
-  <th colspan="8" style="color:red">No Record Found</th>
+  <td colspan="9" style="color:red">No Record Found</td>
 </tr>
-<?php } ?>
+
+<?php } ?>  
  </tbody>
             </table>
-            
+            <?php } ?>
             
           
     </div>
@@ -111,7 +152,7 @@ $cnt=$cnt+1;
 </div>
 </section>
  <!-- footer -->
-		 <?php include_once('includes/footer.php');?>  
+     <?php include_once('includes/footer.php');?>  
   <!-- / footer -->
 </section>
 

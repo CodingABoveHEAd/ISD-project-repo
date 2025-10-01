@@ -5,12 +5,31 @@ include('includes/dbconnection.php');
 if (strlen($_SESSION['eahpaid']==0)) {
  header('location:logout.php');
   } else{
-   
+    if(isset($_POST['submit']))
+  {
+
+
+ $pagetitle=$_POST['pagetitle'];
+$pagedes=$_POST['pagedes'];
+
+ $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$pagedes' where  PageType='aboutus'");
+
+    if ($query) {
+    
+    echo "<script>alert('About Us has been updated.');</script>";
+  }
+  else
+    {
+     echo "<script>alert('Something went wrong. Please try again.');</script>";
+    }
+
+  
+}
   ?>
 
 <!DOCTYPE html>
 <head>
-<title>Code Camp BD|| Ambulance Request Reports - Code Camp BD </title>
+<title>Code Camp BD || About US - Code Camp BD </title>
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
@@ -48,7 +67,7 @@ if (strlen($_SESSION['eahpaid']==0)) {
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            B/w Dates Report of Ambulance Request
+                            Update About us
                             <span class="tools pull-right">
                                 <a class="fa fa-chevron-down" href="javascript:;"></a>
                                 <a class="fa fa-cog" href="javascript:;"></a>
@@ -57,23 +76,30 @@ if (strlen($_SESSION['eahpaid']==0)) {
                         </header>
                         <div class="panel-body">
                             <div class="form">
-   
-                                <form class="cmxform form-horizontal " method="post" name="bwdatesreportds" action="bwdates-request-report-details.php">
-                                   
+                                
+                                <form class="cmxform form-horizontal " method="post" action="">
+                                    <?php
+ 
+$ret=mysqli_query($con,"select * from  tblpage where PageType='aboutus'");
+$cnt=1;
+while ($row=mysqli_fetch_array($ret)) {
+
+?>
                                     <div class="form-group ">
-                                        <label for="adminname" class="control-label col-lg-3">From Dates</label>
-                                        <div class="col-lg-6">
-                                            <input class="form-control" id="fromdate" name="fromdate"  type="date" required="true">
+                                        <label for="adminname" class="control-label col-lg-3">Page Title</label>
+                                        <div class="col-lg-8">
+                                            <input class=" form-control" id="pagetitle" name="pagetitle" type="text" required="true" value="<?php  echo $row['PageTitle'];?>">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="adminname" class="control-label col-lg-3">To Dates
+                                        <label for="adminname" class="control-label col-lg-3">Page Description
                                         </label>
-                                        <div class="col-lg-6">
-                                           <input class="form-control " id="todate" type="date" name="todate" required="true">
+                                        <div class="col-lg-8">
+                                            <textarea class=" form-control" id="pagedes" name="pagedes" type="text" required="true" value=""><?php  echo $row['PageDescription'];?></textarea>
                                         </div>
                                     </div>
-                                  
+                                    <?php } ?>
+                                   
                                     <div class="form-group">
                                         <div class="col-lg-offset-3 col-lg-6">
                                           <p style="text-align: center;"> <button class="btn btn-primary" type="submit" name="submit">Update</button></p>
