@@ -24,7 +24,7 @@ echo "<script type='text/javascript'> document.location = 'manage-ambulance.php'
   
 }
   ?>
-
+//here stated the html
 <!DOCTYPE html>
 <head>
 <title>Code Camp BD || Update Ambulance Details  </title>
@@ -155,6 +155,7 @@ while ($row=mysqli_fetch_array($ret)) {
 <script src="js/jquery.nicescroll.js"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="js/jquery.scrollTo.js"></script>
+//ifhghrhgrheh
 </body>
 </html>
 <?php }  ?>
