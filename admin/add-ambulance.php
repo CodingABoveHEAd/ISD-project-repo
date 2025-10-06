@@ -34,7 +34,7 @@ echo "<script type='text/javascript'> document.location = 'add-ambulance.php'; <
   
 }
   ?>
-
+// here stated the html
 <!DOCTYPE html>
 <head>
 <title>Code Camp BD || Add Ambulance - Code Camp BD </title>
@@ -151,7 +151,7 @@ echo "<script type='text/javascript'> document.location = 'add-ambulance.php'; <
 </section>
 
 </section>
-
+// here stated the html 
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/scripts.js"></script>
