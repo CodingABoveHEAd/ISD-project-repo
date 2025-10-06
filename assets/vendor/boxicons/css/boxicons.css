@@ -10,7 +10,6 @@
     url('../fonts/boxicons.woff') format('woff'),
     url('../fonts/boxicons.ttf') format('truetype'),
     url('../fonts/boxicons.svg?#boxicons') format('svg');
-
 }
 .bx
 {
@@ -32,6 +31,7 @@
 {
     margin-left: 2em;
     padding-left: 0;
+
     list-style: none;
 }
 .bx-ul > li
@@ -42,9 +42,12 @@
 {
     font-size: inherit;
     line-height: inherit;
+
     position: absolute;
     left: -2em;
+
     width: 2em;
+
     text-align: center;
 }
 @-webkit-keyframes spin
@@ -273,7 +276,6 @@
         opacity: 0;
     }
 }
-
 @-webkit-keyframes tada
 {
     from
@@ -404,7 +406,6 @@
     -webkit-animation: fade-up 1.5s infinite linear;
             animation: fade-up 1.5s infinite linear;
 }
-
 .bx-fade-down
 {
     -webkit-animation: fade-down 1.5s infinite linear;
