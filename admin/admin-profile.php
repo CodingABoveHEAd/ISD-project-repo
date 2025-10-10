@@ -18,7 +18,7 @@ echo "<script type='text/javascript'> document.location = 'admin-profile.php'; <
   }
   else
     {
-      echo "<script>alert('Something went wrong. Please try again.');</script>";
+      echo "<script>alert('Something went wrong. Please try again after a few minuetes.');</script>";
     }
   }
   ?>
@@ -73,7 +73,7 @@ echo "<script type='text/javascript'> document.location = 'admin-profile.php'; <
 
    <?php
 $adminid=$_SESSION['eahpaid'];
-$ret=mysqli_query($con,"select  from tbladmin where ID='$adminid'");
+$ret=mysqli_query($con,"select * from tbladmin where ID='$adminid'");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 
