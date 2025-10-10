@@ -73,7 +73,7 @@ echo "<script type='text/javascript'> document.location = 'admin-profile.php'; <
 
    <?php
 $adminid=$_SESSION['eahpaid'];
-$ret=mysqli_query($con,"select * from tbladmin where ID='$adminid'");
+$ret=mysqli_query($con,"select  from tbladmin where ID='$adminid'");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 
