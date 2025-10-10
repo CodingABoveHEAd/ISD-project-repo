@@ -33,7 +33,7 @@ echo '<script>alert("Your current password is wrong.")</script>';
 <!DOCTYPE html>
 <head>
 <title>Code Camp BD || Change Password - Code Camp BD </title>
-
+<!DOCTYPE html>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
 <link rel="stylesheet" href="css/bootstrap.min.css" >
@@ -133,13 +133,15 @@ return true;
             </div>
             <!-- page end-->
         </div>
-
+<!-- footer -->
+          <?php include_once('includes/footer.php');?>    
+  <!-- / footer -->
 </section>
  <!-- footer -->
 		  <?php include_once('includes/footer.php');?>    
   <!-- / footer -->
 </section>
-
+<!--main content end-->
 </section>
 
 <script src="js/bootstrap.js"></script>
