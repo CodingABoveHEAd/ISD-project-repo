@@ -111,7 +111,7 @@ while ($row=mysqli_fetch_array($ret)) {
 
                                     <div class="form-group">
                                         <div class="col-lg-offset-3 col-lg-6">
-                                          <p style="text-align: center;"> <button class="btn btn-primary" type="submit" name="submit">Update</button></p>
+                                          <p style="text-align: center;"> <button class="btn btn-primary" type="submit" name="submit">Update Details</button></p>
                                            
                                         </div>
                                     </div>
