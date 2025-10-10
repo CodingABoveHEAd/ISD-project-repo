@@ -48,6 +48,7 @@ if (strlen($_SESSION['eahpaid']==0)) {
       <table class="table table-bordered">
         <thead>
           <tr>
+            <!-- <th>S.NO</th> -->
             <th data-breakpoints="xs">S.NO</th>
             <th>Booking Number</th>
             <th>Patient Name</th>
@@ -78,6 +79,8 @@ while ($row=mysqli_fetch_array($ret)) {
 
                                    <td> <?php   $pstatus=$row['Status'];  
                  if($pstatus==""){ ?>
+
+
 <span class="badge badge-info">New</span>
  <?php } elseif($pstatus=="Assigned"){ ?>
 <span } class="badge badge-primary">Assigned</span>
@@ -116,12 +119,10 @@ $cnt=$cnt+1;
 </section>
 
 <!--main content end-->
+
+
 </section>
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/jquery.slimscroll.js"></script>
-<script src="js/jquery.nicescroll.js"></script>
+
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="js/jquery.scrollTo.js"></script>
 </body>
