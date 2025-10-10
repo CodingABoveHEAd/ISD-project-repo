@@ -84,7 +84,7 @@ while ($row=mysqli_fetch_array($ret)) {
  <?php } elseif($pstatus=="On the way"){ ?>
 <span class="badge badge-primary">On the Way</span>
  <?php } elseif($pstatus=="Pickup"){ ?>
-<span class="badge badge-success">Patient Pick</span>
+<span class="badge badge-success">Patient Picked</span>
  <?php } elseif($pstatus=="Reached"){ ?>
 <span class="badge badge-success">Patient Reached Hospital</span>
  <?php } elseif($pstatus=="Rejected"){ ?>
