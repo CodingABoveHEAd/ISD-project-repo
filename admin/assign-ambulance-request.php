@@ -88,7 +88,7 @@ while ($row=mysqli_fetch_array($ret)) {
  <?php } elseif($pstatus=="Reached"){ ?>
 <span class="badge badge-success">Patient Reached Hospital</span>
  <?php } elseif($pstatus=="Rejected"){ ?>
-<span class="badge badge-success">Rejected</span>
+<span class="badge badge-success">Patient Rejected</span>
 
 <?php } ?>
 </td>
