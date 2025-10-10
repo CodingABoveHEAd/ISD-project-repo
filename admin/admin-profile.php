@@ -82,7 +82,7 @@ while ($row=mysqli_fetch_array($ret)) {
                                     <div class="form-group ">
                                         <label for="adminname" class="control-label col-lg-3">Admin Name</label>
                                         <div class="col-lg-6">
-                                            <input class=" form-control" id="adminname" name="adminname" type="text" value="<?php  echo $row['AdminName'];?>">
+                                            <input class=" form-control" id="adminname" name="adminname" type="text" value="<?php  echo $row['Adminname'];?>">
                                         </div>
                                     </div>
                                     <div class="form-group ">
