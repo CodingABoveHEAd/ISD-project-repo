@@ -110,7 +110,9 @@ $cnt=$cnt+1;
   </div>
 </div>
 </section>
-
+ <!-- footer -->
+		 <?php include_once('includes/footer.php');?>  
+  <!-- / footer -->
 </section>
 
 <!--main content end-->
