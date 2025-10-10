@@ -15,7 +15,10 @@ $row=mysqli_fetch_array($query);
 if($row>0){
 $ret=mysqli_query($con,"update tbladmin set Password='$newpassword' where ID='$adminid'");
 echo '<script>alert("Your password successully changed.")</script>'; 
-} 
+} else {
+
+echo '<script>alert("Your current password is wrong.")</script>';
+}
 
 
 
