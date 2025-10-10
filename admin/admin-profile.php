@@ -18,7 +18,7 @@ echo "<script type='text/javascript'> document.location = 'admin-profile.php'; <
   }
   else
     {
-      echo "<script>alert('Something went wrong. Please try again after a few minuetes.');</script>";
+      echo "<script>alert('Something went wrong. Please try again.');</script>";
     }
   }
   ?>
@@ -39,6 +39,7 @@ echo "<script type='text/javascript'> document.location = 'admin-profile.php'; <
 <!-- font-awesome icons -->
 <link rel="stylesheet" href="css/font.css" type="text/css"/>
 <link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
 <script src="js/jquery2.0.3.min.js"></script>
 </head>
 <body>
@@ -110,7 +111,7 @@ while ($row=mysqli_fetch_array($ret)) {
 
                                     <div class="form-group">
                                         <div class="col-lg-offset-3 col-lg-6">
-                                          <p style="text-align: center;"> <button class="btn btn-primary" type="submit" name="submit">Update Details</button></p>
+                                          <p style="text-align: center;"> <button class="btn btn-primary" type="submit" name="submit">Update</button></p>
                                            
                                         </div>
                                     </div>
