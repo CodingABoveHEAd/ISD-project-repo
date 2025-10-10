@@ -61,7 +61,39 @@ if (strlen($_SESSION['eahpaid']==0)) {
         <?php
       
         
+$ret=mysqli_query($con,"select * from  tblambulancehiring");
+$cnt=1;
+$count=mysqli_num_rows($ret);
+if($count>0){
+while ($row=mysqli_fetch_array($ret)) {
+?>
+        <tbody>
+          <tr data-expanded="true">
+            <td><?php echo $cnt;?></td>
+              <td><?php  echo $row['BookingNumber'];?></td>
+              <td><?php  echo $row['PatientName'];?></td>
+                  <td><?php  echo $row['RelativeConNum'];?></td>
+                  <td><?php  echo $row['HiringDate'];?> : <?php  echo $row['HiringTime'];?></td>
+                  <td><?php  echo $row['BookingDate'];?></td>
 
+                                   <td> <?php   $pstatus=$row['Status'];  
+                 if($pstatus==""){ ?>
+<span class="badge badge-info">New</span>
+ <?php } elseif($pstatus=="Assigned"){ ?>
+<span } class="badge badge-primary">Assigned</span>
+ <?php } elseif($pstatus=="On the way"){ ?>
+<span class="badge badge-primary">On the Way</span>
+ <?php } elseif($pstatus=="Pickup"){ ?>
+<span class="badge badge-success">Patient Pick</span>
+ <?php } elseif($pstatus=="Reached"){ ?>
+<span class="badge badge-success">Patient Reached Hospital</span>
+ <?php } elseif($pstatus=="Rejected"){ ?>
+<span class="badge badge-success">Rejected</span>
+
+<?php } ?>
+</td>
+                  <td><a href="booking-details.php?id=<?php echo $row['ID'];?>&&bookingnum=<?php echo $row['BookingNumber'];?>" class="btn btn-primary">View</a></td>
+                </tr>
                 <?php 
 $cnt=$cnt+1;
 } } else {?>
