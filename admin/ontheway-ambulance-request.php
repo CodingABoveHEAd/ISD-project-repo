@@ -33,7 +33,6 @@ if (strlen($_SESSION['eahpaid']==0)) {
 <!--header start-->
 <?php include_once('includes/header.php');?>
 <!--header end-->
-<!--sidebar start-->
 <?php include_once('includes/sidebar.php');?>
 <!--sidebar end-->
 <!--main content start-->
@@ -48,7 +47,7 @@ if (strlen($_SESSION['eahpaid']==0)) {
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th data-breakpoints="xs">Serial.NO</th>
+            <th data-breakpoints="xs">S.NO</th>
             <th>Booking Number</th>
             <th>Patient Name</th>
             <th>Relative Contact Number</th>
