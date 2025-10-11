@@ -48,7 +48,7 @@ if (strlen($_SESSION['eahpaid']==0)) {
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th data-breakpoints="xs">S.NO</th>
+            <th data-breakpoints="xs">Serial.NO</th>
             <th>Booking Number</th>
             <th>Patient Name</th>
             <th>Relative Contact Number</th>
