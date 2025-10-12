@@ -42,7 +42,7 @@ CREATE TABLE `tbladmin` (
 --
 
 INSERT INTO `tbladmin` (`ID`, `AdminName`, `UserName`, `MobileNumber`, `Email`, `Password`, `AdminRegdate`) VALUES
-(1, 'Code Camp BD', 'admin', 1608445456, 'admin@gmail.com', '714610777dd05a47ffe4bb9807cc3320', '2024-09-27 08:56:46');
+(1, 'admin', 'admin', 1608445456, 'admin@gmail.com', '714610777dd05a47ffe4bb9807cc3320', '2025-10-13 010:50:46');
 
 -- --------------------------------------------------------
 
@@ -66,10 +66,10 @@ CREATE TABLE `tblambulance` (
 --
 
 INSERT INTO `tblambulance` (`ID`, `AmbulanceType`, `AmbRegNum`, `DriverName`, `DriverContactNumber`, `CreationDate`, `Status`, `UpdationDate`) VALUES
-(1, '1', 'DL14RT5678', 'Joginder Singh', 4567891236, '2024-03-03 06:00:22', 'Pickup', '2024-03-14 14:51:24'),
-(2, '2', 'DL15RT5678', 'kamal Yadav', 7894563219, '2024-03-03 06:02:06', 'Assigned', '2024-03-14 14:39:45'),
-(3, '1', 'DL14RT5678', 'Ramesh Singh', 2567891231, '2024-03-03 06:00:22', 'Pickup', '2024-03-14 14:51:24'),
-(4, '2', 'UP15RT5612', 'Toshib Yadav', 6894563219, '2024-03-03 06:02:06', 'Reached', '2024-09-26 05:00:15');
+(1, '1', 'DL14RT5678', 'Niloy', 4567891236, '2024-03-03 06:00:22', 'Pickup', '2025-03-14 14:51:24'),
+(2, '2', 'DL15RT5678', 'Prince', 7894563219, '2024-03-03 06:02:06', 'Assigned', '2025-03-14 14:39:45'),
+(3, '1', 'DL14RT5678', 'Hamim', 2567891231, '2024-03-03 06:00:22', 'Pickup', '2025-03-14 14:51:24'),
+(4, '2', 'UP15RT5612', 'Ahona', 6894563219, '2024-03-03 06:02:06', 'Reached', '2025-09-26 05:00:15');
 
 -- --------------------------------------------------------
 
