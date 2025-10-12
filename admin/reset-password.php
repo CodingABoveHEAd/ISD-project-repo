@@ -23,7 +23,7 @@ session_destroy();
 
 <!DOCTYPE html>
 <head>
-<title>Code Camp BD | Reset Password </title>
+<title>KUET Ambulance | Reset Password </title>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
 <link rel="stylesheet" href="css/bootstrap.min.css" >

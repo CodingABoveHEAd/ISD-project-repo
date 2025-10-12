@@ -37,7 +37,7 @@ echo "<script type='text/javascript'> document.location = 'add-ambulance.php'; <
 // here stated the html
 <!DOCTYPE html>
 <head>
-<title>Code Camp BD || Add Ambulance - Code Camp BD </title>
+<title>Code Camp BD || Add Ambulance - KUET Ambulance</title>
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->

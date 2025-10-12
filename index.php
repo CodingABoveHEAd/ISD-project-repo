@@ -32,7 +32,7 @@ if(isset($_POST['submit'])) {
 
 <head>
   
-  <title>Emergancy Ambulance Hiring Portal || Home Page - Code Camp BD</title>
+  <title>Emergancy Ambulance Hiring Portal || Home Page - KUET Ambulance</title>
  
   
   <!-- Google Fonts -->

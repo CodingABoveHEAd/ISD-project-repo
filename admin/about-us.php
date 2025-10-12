@@ -29,7 +29,7 @@ $pagedes=$_POST['pagedes'];
 
 <!DOCTYPE html>
 <head>
-<title>Code Camp BD || About US - Code Camp BD </title>
+<title>Code Camp BD || About US - KUET Ambulance</title>
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->

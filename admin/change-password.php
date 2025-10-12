@@ -32,7 +32,7 @@ echo '<script>alert("Your current password is wrong.")</script>';
 
 <!DOCTYPE html>
 <head>
-<title>Code Camp BD || Change Password - Code Camp BD </title>
+<title>Code Camp BD || Change Password - KUET Ambulance</title>
 <!DOCTYPE html>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->

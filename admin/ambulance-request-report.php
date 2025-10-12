@@ -10,7 +10,7 @@ if (strlen($_SESSION['eahpaid']==0)) {
 
 <!DOCTYPE html>
 <head>
-<title>Code Camp BD|| Ambulance Request Reports - Code Camp BD </title>
+<title>Code Camp BD|| Ambulance Request Reports - KUET Ambulance </title>
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
